@@ -26,8 +26,7 @@ const Home = () => {
             setFilteredProducts(json)
             setLoading(false)
         })
-        .catch((e) => {
-            console.log(e)
+        .catch(() => {
             setError(true)
             setLoading(false)
         })
@@ -47,11 +46,15 @@ const Home = () => {
         setFilteredProducts(products.filter(product => product.category.toLowerCase().includes(value.toLowerCase())))
     }
 
+    const reestablishProducts = () => {
+        setFilteredProducts(products)
+    }
+
     return (
     <div className="min-h-[70vh] w-[100%] bg-slate-300">
         <Nav  handleSearch={handleSearch} handleCategory={handleCategory} />
         {error && <p className="text-center">Error</p>}
-        {loading ? <div className="min-h-[75vh] w-full flex justify-center items-center"><Oval color="#999999" secondaryColor="#a6a6a6"/></div> : <ItemList products={filteredProducts}/>}
+        {loading ? <div className="min-h-[75vh] w-full flex justify-center items-center"><Oval color="#999999" secondaryColor="#a6a6a6"/></div> : <ItemList products={filteredProducts} reestablish={reestablishProducts}/>}
     </div>
   )
 }

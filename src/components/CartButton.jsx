@@ -12,10 +12,10 @@ function CartButton({product}) {
 
     const handleClick = () => {
         addToCart(product, 1);
-        toast('Producto agregado al carrito de compra!', {
+        toast('✔️ Producto agregado al carrito de compra!', {
             position: "bottom-right",
             autoClose: 1000,
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
             draggable: true,
             theme: "light",
