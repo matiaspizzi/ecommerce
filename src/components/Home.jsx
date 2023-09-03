@@ -1,6 +1,7 @@
 import ItemList from "./ItemList"
 import Nav from "./Nav"
 import { useState, useEffect } from "react"
+import { Oval } from  'react-loader-spinner'
 
 const Home = () => {
     const [ products, setProducts ] = useState([])
@@ -47,11 +48,10 @@ const Home = () => {
     }
 
     return (
-    <div className="min-h-[50vh] w-full">
-        <Nav  handleSearch={handleSearch} handleCategory={handleCategory}/>
-        {loading && <p className="text-center">Loading...</p>}
+    <div className="min-h-[70vh] w-[100%] bg-slate-300">
+        <Nav  handleSearch={handleSearch} handleCategory={handleCategory} />
         {error && <p className="text-center">Error</p>}
-        <ItemList products={filteredProducts}/>
+        {loading ? <div className="min-h-[75vh] w-full flex justify-center items-center"><Oval color="#999999" secondaryColor="#a6a6a6"/></div> : <ItemList products={filteredProducts}/>}
     </div>
   )
 }

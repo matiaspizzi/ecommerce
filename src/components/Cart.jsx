@@ -40,12 +40,14 @@ const Cart = () => {
           <div className="flex justify-center">
             <p>Total: {totalCart}</p>
           </div>
-
-          <div className="flex justify-center">
+          
+          {cart.length ? (<div className="flex justify-center">
             <Link to="/checkout">
               <button>Checkout</button>
             </Link>
-          </div>
+          </div>) : (<div className="flex justify-center"> 
+            <p>No hay productos en el carrito</p>
+          </div>)}
         </div>
       </div>
   )
