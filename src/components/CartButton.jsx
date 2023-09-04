@@ -27,7 +27,7 @@ function CartButton({product}) {
 
     return (
         <>
-            <button onClick={handleClick} className='w-full md:w-80 bg-blue-100 text-blue-500 font-bold flex justify-around py-3 rounded-md mt-8'>
+            <button onClick={handleClick} className='w-full md:w-80 bg-blue-100 text-blue-500 font-bold flex justify-around py-3 rounded-md mt-8 shadow-md'>
                 <p>Agregar al carrito</p>
                 <BsFillCartPlusFill className='text-xl'/>
             </button>

@@ -51,7 +51,7 @@ const Home = () => {
     }
 
     return (
-    <div className="min-h-[70vh] w-[100%] bg-slate-300">
+    <div className="min-h-[70vh] w-[100%] bg-slate-100">
         <Nav  handleSearch={handleSearch} handleCategory={handleCategory} />
         {error && <p className="text-center">Error</p>}
         {loading ? <div className="min-h-[75vh] w-full flex justify-center items-center"><Oval color="#999999" secondaryColor="#a6a6a6"/></div> : <ItemList products={filteredProducts} reestablish={reestablishProducts}/>}

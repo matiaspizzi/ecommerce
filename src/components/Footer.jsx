@@ -12,8 +12,8 @@ const Footer = () => {
             </p>
             <div className="text-left">
               <p className="text-sm">Contacto</p>
-              <p>Teléfono: +54 9 11 0000 0000</p>
-              <p>e-mail: mariana@pizzi.com.ar</p>
+              <p>+54 9 11 0000 0000</p>
+              <p>mariana@pizzi.com.ar</p>
             </div>
           </div>
         <p>Este sitio web no tiene relación con Laboratorio De Cosmética Avanzada S.R.L. (LACA), solo se dedica a la venta de sus productos.</p>
