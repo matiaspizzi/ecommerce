@@ -50,7 +50,7 @@ const CartProvider = ({ children }) => {
         setCart([]);
     };
 
-    const totalCart = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+    const totalCart = cart.reduce((total, item) => total + item.precio * item.quantity, 0).toFixed(2);
 
     return (
         <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, totalCart }}>

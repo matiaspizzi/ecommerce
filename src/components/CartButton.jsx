@@ -18,7 +18,7 @@ function CartButton({product}) {
             hideProgressBar: true,
             closeOnClick: true,
             draggable: true,
-            theme: "light",
+            theme: "dark",
         });
         setTimeout(() => {
             window.location.href = '/cart';

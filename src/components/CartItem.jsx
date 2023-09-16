@@ -14,11 +14,11 @@ const CartItem = ({ product }) => {
             <div className="flex flex-col justify-between items-center w-full h-full p-4 gap-2">
                 <button onClick={() => removeFromCart(product.id)} className='md:text-3xl text-xl self-end'><CiSquareRemove/></button>
                 <Link to={`/item/${product.id}`} className="flex flex-col justify-between items-center w-full h-full p-4 gap-2">
-                    <img src={product.image} alt={product.title} className="h-[17vh] object-contain" />
+                    <img src={product.image} alt={product.nombre} className="h-[17vh] object-contain" />
 
                     <div className="flex flex-col justify-center items-center gap-2 text-slate-400 text-center text-sm">
-                        <p>{product.title}</p>
-                        <p>$ {product.price}</p>
+                        <p>{product.nombre}</p>
+                        <p>$ {product.precio}</p>
                     </div>
                 </Link>
 
@@ -28,7 +28,7 @@ const CartItem = ({ product }) => {
                         <p>{product.quantity}</p>
                         <button onClick={() => updateQuantity(product.id, -1)}><AiOutlineMinus /></button>
                     </div>
-                    <p className='text-md text-black'>$ {(product.price * product.quantity).toFixed(2)}</p>
+                    <p className='text-md text-black'>$ {(product.precio * product.quantity).toFixed(2)}</p>
                 </div>
             </div>
         </div>
